@@ -1,0 +1,37 @@
+{
+  "timeZone": "America/Los_Angeles",
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/workspace.linkpreview",
+    "https://www.googleapis.com/auth/script.external_request"
+  ],
+  "urlFetchWhitelist": [
+    "https://oauth-pro-v2.corrigo.com/OAuth/token",
+    "https://*.corrigo.com/api"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Corrigo",
+      "logoUrl": "https://nwfem.corrigo.com/favicon/favicon-192x192.png",
+      "layoutProperties": {
+        "primaryColor": "#df0613"
+      }
+    },
+    "docs": {
+      "linkPreviewTriggers": [
+        {
+          "patterns": [
+            {
+              "hostPattern": "nwfem.corrigo.com",
+              "pathPrefix": "corpnet/workorder"
+            }
+          ],
+          "runFunction": "workOrderPreview",
+          "labelText": "Work Order",
+          "logoUrl": "https://nwfem.corrigo.com/favicon/favicon-192x192.png"
+        }
+      ]
+    }
+  }
+}
